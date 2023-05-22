@@ -1,0 +1,91 @@
+/* Ajout police */
+@font-face {
+    font-family: 'Cantarell';
+    src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+    font-family: 'Beyno';
+    src: url(../police/FontsFree-Net-BEYNO.ttf);
+}
+@font-face {
+    font-family: 'Panthera';
+    src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+    font-family: 'WakandaForeve';
+    src: url(../police/WakandaForever-Regular.ttf);
+}
+
+
+/*couleur menu type*/
+:root{
+    --yellow-color: #FFFF00;
+    --yellow-light: #F8F184;
+    --blue-color: #1958FD;
+    --red-color: #B11313;
+    --black-color: #0D0E09;
+    --gris-color: #c4c4c4;
+    --white-color: #fff;
+    --gradient-white: #EDDEBF40;
+    --gradient-red: #89000960;
+    --gradient-grey: #EDDEBF40;
+    --gradient-gray: #19587D40;
+
+}
+
+/*COMMUN*/
+body{
+    background: url(../All_pages/arrière_plan.png);
+    
+}
+/*HEADER*/
+ul{
+    list-style-type: none;
+    display: inline;
+}
+.navright a {
+    margin:20px 50px 20px 30px ;
+    color: white;
+    font-family: 'Beyno';
+    text-decoration: none;
+}
+
+.navright a:hover{
+    text-decoration: underline;
+}
+
+
+#nav{
+    padding:20px 70px 10px 150px;
+    display: flex;
+    justify-content: space-between;
+}
+/*Footer*/
+footer{
+    /*background: inherit;*/
+    background: url(../All_pages/back_footer.png);
+}
+
+#footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 170px;
+}
+
+#footer .footerright{
+    display: flex;
+    justify-content: space-between;
+    
+}
+#footer .right2{
+    padding-left:128px
+}
+
+.marvel{
+    position: absolute;
+    margin-right: 820px;
+    margin-top: 170px;
+}
+
+  
+/*Accueil*/

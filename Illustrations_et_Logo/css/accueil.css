@@ -1,91 +1,268 @@
-/* Ajout police */
-@font-face {
-    font-family: 'Cantarell';
-    src: url(../police/Cantarell-Regular.ttf);
+/* styles pour la page d'accueil */
+aside {
+    height: 30vw;
+    display: grid;
+    width: 1vw;
+    border-left: 3px solid #9E91B7;
+    float: left;
+    position: absolute;
+    top:  0;
+    left: 4vw;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    position: fixed;
+    transition: transform 0.3s ease-in-out;
 }
-@font-face {
-    font-family: 'Beyno';
-    src: url(../police/FontsFree-Net-BEYNO.ttf);
-}
-@font-face {
-    font-family: 'Panthera';
-    src: url(../police/PantheraRegular-MVZ9J.ttf);
-}
-@font-face {
-    font-family: 'WakandaForeve';
-    src: url(../police/WakandaForever-Regular.ttf);
+
+aside .pagemenu {
+    grid-row: 1;
+    border-right: 3px solid #9E91B7;
+    width: 50%;
 }
 
 
-/*couleur menu type*/
-:root{
-    --yellow-color: #FFFF00;
-    --yellow-light: #F8F184;
-    --blue-color: #1958FD;
-    --red-color: #B11313;
-    --black-color: #0D0E09;
-    --gris-color: #c4c4c4;
-    --white-color: #fff;
-    --gradient-white: #EDDEBF40;
-    --gradient-red: #89000960;
-    --gradient-grey: #EDDEBF40;
-    --gradient-gray: #19587D40;
-
+aside ul li {
+    margin-top: 5%;
 }
 
-/*COMMUN*/
-body{
-    background: url(../All_pages/arrière_plan.png);
-    
+aside .réseaux-sociaux {
+    grid-row: 2;
+    margin-left: -30%;
 }
-/*HEADER*/
-ul{
-    list-style-type: none;
-    display: inline;
+/* styles pour les sections */
+
+section[class="Introduction"] p {
+    width: 32vw;
+    text-align: justify;
 }
-.navright a {
-    margin:20px 50px 20px 30px ;
-    color: white;
-    font-family: 'Beyno';
+
+section a {
+    color: #fff;
+    text-decoration: underline;
+}
+section[class="Introduction"] {
+    padding: 10% 15%;
+    background: url(../Accueil/Pantherhome1..png);
+    height: 30vW;
+    width: 100%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 70% top;
+    margin-top: -10%;
+}
+
+/*styles des descriptions de la section*/
+section[class="présentation"] {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+}
+
+section[class="présentation"] > div[class='colonne'] {
+    grid-column: 1/2;
+}
+
+section[class="présentation"] > div[class='colonne'] {
+    grid-column: 2/3;
+    padding-left: 10%;
+    height: 17.8vw;
+    width: 100%;
+    background-color: #021740;
+    padding-left: 2%;
+}
+
+section[class="présentation"] .colonne {
+    display: grid;
+    grid-template-columns: 4fr 4fr 3fr 4fr 2fr;
+}
+
+section[class="présentation"] .colonne .img-1 {
+    grid-column: 1/2;
+}
+
+section[class="présentation"] .colonne .img-1 img {
+    width: 100%;
+    /*margin-top: -15%;*/
+}
+
+section[class="présentation"] .colonne .txt1 {
+    grid-column: 2/3;
+    padding: 3%;
+    position: relative;
+}
+
+section[class="présentation"] .colonne .img-2 {
+    grid-column: 3/4;
+}
+
+section[class="présentation"] .colonne .img-2 img {
+    width: 100%;
+}
+
+section[class="présentation"] .colonne .txt2 {
+    grid-column: 4/5;
+    padding: 3%;
+    position: relative;
+}
+
+section[class="présentation"] .colonne .img-3 {
+    grid-column: 5/6;
+    position: relative;
+}
+
+section[class="présentation"] .part1 .part-2 {
+    margin-left: 5px;
+}
+
+section[class="présentation"] .colonne .img-3 a {
+    position: absolute;
+    right: 25%;
+    top: 25%;
+    padding: 10% 15%;
+    background-color: #021740;
+    border-radius: 50%;
     text-decoration: none;
 }
 
-.navright a:hover{
-    text-decoration: underline;
+section[class="présentation"] .colonne .img-3 img {
+    width: 110%;
+}
+
+section[class="présentation"] .colonne>div>a[class='plus'] {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+}
+
+.part-1,.part-2{
+    margin: 10px 10px 10px 10px;
 }
 
 
-#nav{
-    padding:20px 70px 10px 150px;
+/*style de la section 2 de la page*/
+section[class='section2'] {
+     padding: 15% 10% 5% 10%;
+}
+
+section[class='section2'] .colonne {
+    display: grid;
+    grid-template-columns: 50vw 8vw 25vw 3vw;
+}
+
+section[class='section2'] .colonne .txt {
+    grid-column: 1/2;
+    padding-left: 10%;
+}
+
+section[class='section2'] .colonne .profile {
+    grid-column:  3/4;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr 4fr;
+}
+
+section[class='section2'] .text {
+    text-align: justify;
+}
+
+/*style au niveau du profil */
+section[class='section2'] .colonne .profile .card{
+    background-color: #FFF;
+    border-radius: 1em;
+    grid-row: 2;
+    width: 25vw;
+    text-align: center;
+    color: #000;
+    box-shadow: 0px 4px 8px 0px #000;
+}
+
+section[class='section2'] .colonne .profile .card img {
+    margin-top: -60%;
+    width: 80%;
+}
+
+section[class='section2'] .colonne .profile .card .btn button{
+    padding: 2% 3%;
+    background-color: #3D2DA6;
+    border-radius: 5%;
+    color: #fff;
+    border: none;
+    font-size: 0.75em;
+}
+
+section[class='section2'] .colonne .profile .card .content{
+    padding: 10%;
+    text-align: left;
+}
+
+section[class='section2'] .colonne .profile .déguisement-img {
+    grid-row: 4;
     display: flex;
-    justify-content: space-between;
-}
-/*Footer*/
-footer{
-    /*background: inherit;*/
-    background: url(../All_pages/back_footer.png);
+    align-items: center;
 }
 
-#footer{
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 170px;
+section[class='section2'] .colonne .profile .déguisement-img img {
+    margin-left: -20%;
+    width: 40vw;
 }
 
-#footer .footerright{
-    display: flex;
-    justify-content: space-between;
+/*Style du section contact*/
+section[class='contact'] {
+    background-image: url('../Accueil/Pantherhome7.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding: 10%;
+    color:#021740;
+}
+
+section[class='contact'] .title {
+    font-size: 2em;
+    font-weight: bolder;
+    color:#021740;
+}
+
+section[class='contact'] .content {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1.0) 20%, rgba(242, 206, 242, .2) 60%);
+    border-radius: 20%;
+    text-align: center;
+    grid-column: 2/3;
+    height: 35vw;
+    padding: 1em 0;
     
 }
-#footer .right2{
-    padding-left:128px
+
+section[class='contact'] .content input {
+    width: 40%;
+    height: 3vw;
+    border-radius: 3em;
+    border: 1px solid #021740;
+    padding: 0 5%;
+    background-color: transparent;
+    font-size: 1em;
+    color:#021740;
 }
 
-.marvel{
-    position: absolute;
-    margin-right: 820px;
-    margin-top: 170px;
+section[class='contact'] .content textarea {
+    width: 40%;
+    height: 15%;
+    resize: none;
+    border: 1px solid #021740;
+    padding: 0 5%;
+    border-radius: 2em;
+    background-color: transparent;
+    font-size: 1em;
+    
 }
 
-  
-/*Accueil*/
+section[class='contact'] .content button {
+    height: 10%;
+    border-radius: 3em;
+    font-size: 1.5em;
+    margin-top: 2%;
+    border: none;
+    padding: 2% 5% 4% 5%;
+    background-color: #F2CEF2;
+    color:#021740;
+}
